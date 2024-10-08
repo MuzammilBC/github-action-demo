@@ -29,8 +29,9 @@ jobs:
   
     - name: Build with Gradle 
       run: ./gradlew build
+      
     - name: list the jar file
-      run: ls build/libs/
+      run: ls -ltrh
   
 
     - name: Build and push Docker image
