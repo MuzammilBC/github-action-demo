@@ -33,6 +33,9 @@ jobs:
     - name: list the files 
       run: cd build/libs/ && ls -ltrh
 
+    - name: Grant exicute permission to docker file 
+      run: chmod +x Dockerfile
+
     - name: Build and push Docker image
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
