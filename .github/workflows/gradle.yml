@@ -31,7 +31,7 @@ jobs:
       run: ./gradlew build
       
     - name: list the files 
-      run: cd build/libs/ && ls -ltrh && chmod +x  build/libs/java-app-1.0-SNAPSHOT.jar
+      run: cd build/libs/ && ls -ltrh
 
     - name: Build and push Docker image
       uses: mr-smithers-excellent/docker-build-push@v4
