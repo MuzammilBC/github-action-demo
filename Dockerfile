@@ -5,7 +5,7 @@ FROM openjdk:8-jre-alpine
 WORKDIR /usr/app
 
 # Copy the JAR file into the container at /usr/app
-COPY build/libs/my-app-1.0-SNAPSHOT.jar /usr/app/
+COPY /build/libs/my-app-1.0-SNAPSHOT.jar /usr/app/
 
 # Make port 8080 available to the world outside this container
 EXPOSE 8080
