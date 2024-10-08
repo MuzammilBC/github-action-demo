@@ -31,4 +31,4 @@ jobs:
       run: ./gradlew build
       
     - name: list the files 
-      run: ls /build/libs/
+      run: cd build && ls -ltrh
