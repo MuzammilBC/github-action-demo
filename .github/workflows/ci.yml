@@ -29,10 +29,14 @@ jobs:
   
     - name: Build with Gradle 
       run: ./gradlew build
+    - name: list the jar file
+      run: ls build/libs/
+  
 
     - name: Build and push Docker image
       uses: mr-smithers-excellent/docker-build-push@v6
       with:
+        run: chmod -R 755 build/libs
         image: mbchandashah/docker-repository
         registry: docker.io
         username: ${{ secrets.DOCKER_USERNAME }}
