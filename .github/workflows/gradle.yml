@@ -24,7 +24,7 @@ jobs:
       run: ./gradlew build
       
     - name: List the files 
-      run: ls -ltrh build/libs/
+      run: ls -ltrh && ls -ltrh build/libs/
 
     - name: Verify JAR file exists
       run: test -f build/libs/java-app-1.0-SNAPSHOT.jar
